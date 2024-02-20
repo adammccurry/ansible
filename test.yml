@@ -1,11 +1,6 @@
 ---
 - hosts: freebsd
   tasks:
-    env_vars:
-    - name: ansible_python_interpreter
-      value: "/usr/local/bin/python3.9"
-
-
    - name: Install Step CA
      pkgng:
       name: step-cli
