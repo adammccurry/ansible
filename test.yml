@@ -1,0 +1,34 @@
+---
+- hosts: freebsd
+  tasks:
+
+   - name: Install Step CA
+     pkgng:
+      name: step-cli
+
+   - name: Install Neofetch
+     pkgng:
+      name: neofetch
+   - name: Setting Neofetch at loging for macery
+     lineinfile:
+      dest: /home/macery/.shrc
+      backup: yes
+      line: neofetch
+
+   - name: Installing NRPE 4
+     pkgng:
+      name: nrpe-4.1.0
+   - name: Setting NRPE to Start
+     lineinfile:
+      dest: /etc/rc.conf
+      backup: yes
+      line: nrep3_enable="YES"
+   - name: Install NANO
+     pkgng:
+      name: nano
+   - name: Install TMUX
+     pkgng:
+      name: tmux
+   - name: Install HTOP
+     pkgng:
+      name: htop
