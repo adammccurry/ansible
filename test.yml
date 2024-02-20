@@ -9,7 +9,8 @@
    - name: Install Neofetch
      pkgng:
       name: neofetch
-   - name: Setting Neofetch at loging for macery
+   
+   - name: Setting Neofetch at login
      lineinfile:
       dest: /home/macery/.shrc
       backup: yes
@@ -18,17 +19,21 @@
    - name: Installing NRPE 4
      pkgng:
       name: nrpe-4.1.0
+   
    - name: Setting NRPE to Start
      lineinfile:
       dest: /etc/rc.conf
       backup: yes
-      line: nrep3_enable="YES"
+      line: nrep4_enable="YES"
+   
    - name: Install NANO
      pkgng:
       name: nano
+   
    - name: Install TMUX
      pkgng:
       name: tmux
+   
    - name: Install HTOP
      pkgng:
       name: htop
