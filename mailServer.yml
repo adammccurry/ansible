@@ -1,0 +1,3 @@
+mailservers:
+  hosts:
+    mail.macery.local:

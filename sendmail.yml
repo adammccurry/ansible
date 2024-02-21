@@ -1,0 +1,8 @@
+---
+- hosts: 
+  tasks:
+   - name: Install Sendmail
+     ansible.builtin.apt:
+      name: sendmail
+      state: present
+
