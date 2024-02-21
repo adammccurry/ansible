@@ -36,5 +36,7 @@
    - name: Install HTOP
      pkgng:
       name: htop
-  - check:
-   - freebsd-version
+   
+   - name: Version Check
+     command: freebsd-check
+
