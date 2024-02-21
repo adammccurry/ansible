@@ -38,5 +38,5 @@
       name: htop
    
    - name: Version Check
-     command: freebsd-check
+     command: freebsd-version
 
