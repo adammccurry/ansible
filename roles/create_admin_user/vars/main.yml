@@ -1,0 +1,10 @@
+---
+# vars file for create_admin_user
+admin:
+  - name: 'ansibleuser'
+    comment: 'Ultimate User'
+    uid: '1005'
+
+  - name: 'semaphore'
+    comment: 'Semaphore App User'
+    uid: '1006'
