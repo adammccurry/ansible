@@ -1,0 +1,6 @@
+---
+# tasks file for create_admin_user
+- name: Install Neofetch
+  ansible.builtin.apt:
+    name: neofetch
+    state: present
