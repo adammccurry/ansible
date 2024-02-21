@@ -4,10 +4,10 @@ ungrouped:
 freebsd:
   hosts:
     jailhouse.macery.local:
-    #ns1.macery.local:
-    #nagios.macery.local:
-    #ca.macery.local:
-    #web.macery.local:
-    #squid.macery.local:
-    #radius.macery.local:
-    #mysql.macery.local:
+    ns1.macery.local:
+    nagios.macery.local:
+    ca.macery.local:
+    web.macery.local:
+    squid.macery.local:
+    radius.macery.local:
+    mysql.macery.local:
