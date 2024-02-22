@@ -8,6 +8,8 @@
     state: latest
 
 - name: Install TMUX
+  become: true
+  become_method: sudo
   apt:
      name: tmux
      state: latest
