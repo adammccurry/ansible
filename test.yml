@@ -42,3 +42,7 @@
      register: out
    - debug: var=out.stdout_lines
 
+   
+   - name: Freeradius Role
+      command: - ansible.builtin.import_role:
+        name: freeradius

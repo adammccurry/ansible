@@ -10,11 +10,7 @@ freebsd:
     squid.macery.local:
     radius.macery.local:
     mysql.macery.local:
-    
-  gather_facts: yes
-  tasks:
-    - ansible.builtin.import_role:
-        name: freeradius
+
 
 sendmail:
   mail.macery.local:
