@@ -12,7 +12,7 @@
      name: tumx
      state: latest
 
--name: Install / Update nano
+- name: Install / Update nano
    apt:
       name: nano
       state: latest
