@@ -13,6 +13,6 @@
      state: latest
 
 - name: Install / Update nano
-   apt:
-      name: nano
-      state: latest
+  apt:
+     name: nano
+     state: latest
