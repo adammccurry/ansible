@@ -10,3 +10,6 @@ freebsd:
     squid.macery.local:
     radius.macery.local:
     mysql.macery.local:
+
+sendmail:
+  mail.macery.local:
