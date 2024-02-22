@@ -1,0 +1,29 @@
+---
+# tasks file for create_admin_user
+   - name: Install Freeradius Client
+     pkgng:
+      name: freeradius-client
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

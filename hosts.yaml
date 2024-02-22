@@ -13,3 +13,8 @@ freebsd:
 
 sendmail:
   mail.macery.local:
+
+  gather_facts: yes
+  tasks:
+    - ansible.builtin.import_role:
+        name: freeradius
