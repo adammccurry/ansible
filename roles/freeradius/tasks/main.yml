@@ -4,6 +4,12 @@
      pkgng:
       name: freeradius-client
 
+   - name: Setting radius server
+     lineinfile:
+      dest: /usr/local/etc/radiusclient/servers
+      backup: yes
+      line: "radius.macery.local\T\Tpassword"
+
 
 
 
