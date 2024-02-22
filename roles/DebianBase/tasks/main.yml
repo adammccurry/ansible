@@ -5,7 +5,14 @@
   become_method: sudo
   apt:
     name: neofetch
-    name: tmux
-    name: nano
     state: latest
-    
+
+- name: Install TMUX
+  apt:
+     name: tumx
+     state: latest
+
+-name: Install / Update nano
+   apt:
+      name: nano
+      state: latest
