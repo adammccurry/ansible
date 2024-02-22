@@ -1,6 +1,10 @@
 ---
 # tasks file for create_admin_user
 - name: Install Neofetch
-  ansible.builtin.apt:
+  apt:
     name: neofetch
     state: present
+    register: result
+    until: result is not failed
+    retries: 5
+    delay: 5
