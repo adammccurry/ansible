@@ -1,0 +1,22 @@
+---
+dependencies: []
+
+galaxy_info:
+  role_name: sendmail
+  author: Pavel Vyskocil
+  company: CESNET
+  description: Installs sendmail and add a relay.
+  license: Apache
+  min_ansible_version: 2.5
+  platforms:
+    - name: Debian
+      versions:
+        - stretch
+        - buster
+    - name: EL
+      versions:
+        - 7
+  galaxy_tags:
+    - sendmail
+
+allow_duplicates: true

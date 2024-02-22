@@ -1,0 +1,23 @@
+---
+- name: Install sendmail
+  package:
+    name: sendmail
+    state: present
+  tags:
+    - install
+
+- name: Set relays
+  blockinfile:
+    path: /etc/mail/sendmail.mc
+    marker: "# {mark} ANSIBLE MANAGED BLOCK #"
+    block: |
+      {% for item in sendmail_relays -%}
+        define(`SMART_HOST', `{{ item }}')dnl
+      {% endfor %}
+  tags:
+    - configuration
+  notify:
+    - "restart sendmail"
+
+- name: "flush handlers"
+  meta: flush_handlers

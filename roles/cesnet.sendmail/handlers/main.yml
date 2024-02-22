@@ -1,0 +1,7 @@
+---
+- name: restart sendmail
+  become: true
+  service:
+    state: restarted
+    name: sendmail
+  listen: "restart sendmail"
