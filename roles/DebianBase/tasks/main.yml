@@ -16,3 +16,13 @@
   apt:
      name: nano
      state: latest
+
+- name: Install Step CA CLI
+  apt:
+     name: step-cli
+     state: latest
+
+- name: Install NRPE 4
+  apt:
+    name: nagios-nrpe-plugin
+    state: latest
