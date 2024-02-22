@@ -9,22 +9,34 @@
 
 - name: Install TMUX
   become: true
-  become_method: sudo
+  become_method: sudo 
   apt:
      name: tmux
      state: latest
 
 - name: Install / Update nano
+  become: true
+  become_method: sudo
   apt:
      name: nano
      state: latest
 
 - name: Install Step CA CLI
+  become: true
+  become_method: sudo
   apt:
      name: step-cli
      state: latest
 
 - name: Install NRPE 4
+  become: true
+  become_method: sudo
   apt:
     name: nagios-nrpe-plugin
+    state: latest
+- name: Install / Update HTOP
+  become: true
+  become_method: sudo
+  apt:
+    name: htop
     state: latest
