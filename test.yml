@@ -44,5 +44,5 @@
 
    
    - name: Freeradius Role
-      ansible.builtin.import_role:
-        name: freeradius
+      - ansible.builtin.import_role:
+         name: freeradius
