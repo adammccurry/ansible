@@ -9,7 +9,7 @@
 
 - name: Install TMUX
   apt:
-     name: tumx
+     name: tmux
      state: latest
 
 - name: Install / Update nano
