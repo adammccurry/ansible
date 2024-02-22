@@ -1,0 +1,33 @@
+---
+# tasks file for create_admin_user
+- name: Install / Upgrade Sendmail
+  become: true
+  become_method: sudo
+  apt:
+    name: webmin
+    state: latest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
