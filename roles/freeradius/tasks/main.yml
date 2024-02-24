@@ -9,6 +9,24 @@
       dest: /usr/local/etc/radiusclient/servers
       backup: yes
       line: radius.macery.local               password
+   
+   - name: Adding RADIUS to PAM AUTH
+     lineinfile:
+      dest: /etc/pam.d/sshd
+      backup: yes
+      line: auth            sufficient      pam_radius.so           
+   
+   - name: Adding RADIUS to PAM ACCT
+     lineinfile:
+      dest: /etc/pam.d/sshd
+      backup: yes
+      line: account         sufficient      pam_radius.so
+   
+   - name:  Password  
+     lineinfile:
+      dest: /etc/pam.d/sshd
+      backup: yes
+      line: password        sufficient      pam_radius.so 
 
 
 
