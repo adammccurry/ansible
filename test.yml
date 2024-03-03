@@ -37,10 +37,6 @@
      pkgng:
       name: htop
    
-   - name: Version Check
-     command: freebsd-version
-     register: out
-   - debug: var:out.stdout_lines
    
    
    - ansible.builtin.import_role:
