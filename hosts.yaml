@@ -11,6 +11,7 @@ freebsd:
     radius.macery.local:
     mysql.macery.local:
     cert.macery.local:
+    desk01:
 
 
 sendmail:

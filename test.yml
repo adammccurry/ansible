@@ -40,8 +40,8 @@
    - name: Version Check
      command: freebsd-version
      register: out
-   - debug: var=out.stdout_lines
-
+   #- debug: var=out.stdout_lines
+   - debug: var:out.stdout
    
    
    - ansible.builtin.import_role:
