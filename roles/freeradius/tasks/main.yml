@@ -32,6 +32,8 @@
      ansible.buitin.file:
        src: /usr/local/etc/radiusclient/servers
        dst: /etc/radius.conf
+       owner: root
+       group: wheel
        state: link
 
 
