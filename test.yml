@@ -23,7 +23,7 @@
      lineinfile:
       dest: /etc/rc.conf
       backup: yes
-      line: nrep4_enable="YES"
+      line: nrpe4_enable="YES"
    
    - name: Install NANO
      pkgng:

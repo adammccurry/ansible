@@ -4,31 +4,37 @@
      pkgng:
       name: freeradius-client
 
-   - name: Setting radius server
-     lineinfile:
+#  - name: Setting radius server
+#    lineinfile:
       dest: /usr/local/etc/radiusclient/servers
       backup: yes
       line: radius.macery.local               password
-   
-   - name: Adding RADIUS to PAM AUTH
-     lineinfile:
-      dest: /etc/pam.d/sshd
-      backup: yes
-      line: auth            sufficient      pam_radius.so           
-   
-   - name: Adding RADIUS to PAM ACCT
-     lineinfile:
-      dest: /etc/pam.d/sshd
-      backup: yes
-      line: account         sufficient      pam_radius.so
-   
-   - name:  Password  
-     lineinfile:
-      dest: /etc/pam.d/sshd
-      backup: yes
-      line: password        sufficient      pam_radius.so 
+#  
+#  - name: Adding RADIUS to PAM AUTH
+#    lineinfile:
+#     dest: /etc/pam.d/sshd
+#     backup: yes
+#     line: auth            sufficient      pam_radius.so           
+#  
+#  - name: Adding RADIUS to PAM ACCT
+#    lineinfile:
+#     dest: /etc/pam.d/sshd
+#     backup: yes
+#     line: account         sufficient      pam_radius.so
+#  
+#  - name:  Password  
+#    lineinfile:
+#     dest: /etc/pam.d/sshd
+#     backup: yes
+#     line: password        sufficient      pam_radius.so 
 
-   - name: Create link for radius.com
+   - name: copy /etc/pam.d/sshd
+     ansible.builtin.copy:
+      src: files/sshd
+      dest: /etc/pamd.sshd
+      backup: yes
+      
+   - name: Create link for radius.conf
      ansible.builtin.file:
       src: /usr/local/etc/radiusclient/servers
       dest: /etc/radius.conf
