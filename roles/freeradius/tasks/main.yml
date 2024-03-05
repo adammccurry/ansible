@@ -29,7 +29,7 @@
       line: password        sufficient      pam_radius.so 
 
    - name: Create link for radius.com
-     ansible.buitin.file:
+     ansible.builtin.file:
       src: /usr/local/etc/radiusclient/servers
       dest: /etc/radius.conf
       owner: root
