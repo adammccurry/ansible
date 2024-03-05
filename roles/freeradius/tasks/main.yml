@@ -6,9 +6,9 @@
 
 #  - name: Setting radius server
 #    lineinfile:
-      dest: /usr/local/etc/radiusclient/servers
-      backup: yes
-      line: radius.macery.local               password
+#      dest: /usr/local/etc/radiusclient/servers
+#      backup: yes
+#      line: radius.macery.local               password
 #  
 #  - name: Adding RADIUS to PAM AUTH
 #    lineinfile:
