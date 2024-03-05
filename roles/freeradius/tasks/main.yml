@@ -30,11 +30,11 @@
 
    - name: Create link for radius.com
      ansible.buitin.file:
-       src: /usr/local/etc/radiusclient/servers
-       dst: /etc/radius.conf
-       owner: root
-       group: wheel
-       state: link
+      src: /usr/local/etc/radiusclient/servers
+      dst: /etc/radius.conf
+      owner: root
+      group: wheel
+      state: link
 
 
 
