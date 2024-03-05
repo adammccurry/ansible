@@ -1,5 +1,5 @@
 ---
-# tasks file for create_admin_user
+# tasks file 
    - name: Install Freeradius Client
      pkgng:
       name: freeradius-client
@@ -31,7 +31,7 @@
    - name: Create link for radius.com
      ansible.buitin.file:
       src: /usr/local/etc/radiusclient/servers
-      dst: /etc/radius.conf
+      dest: /etc/radius.conf
       owner: root
       group: wheel
       state: link
