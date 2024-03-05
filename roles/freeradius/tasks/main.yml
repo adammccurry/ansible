@@ -30,7 +30,7 @@
 
    - name: copy /etc/pam.d/sshd
      ansible.builtin.copy:
-      src: sshd
+      src: conf/sshd
       dest: /etc/pamd.sshd
       #backup: yes
 
