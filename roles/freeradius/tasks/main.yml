@@ -32,8 +32,8 @@
      ansible.builtin.copy:
       src: files/sshd
       dest: /etc/pamd.sshd
-      backup: yes
-      
+      #backup: yes
+
    - name: Create link for radius.conf
      ansible.builtin.file:
       src: /usr/local/etc/radiusclient/servers
