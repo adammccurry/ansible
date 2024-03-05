@@ -11,7 +11,7 @@ freebsd:
     #squid.macery.local:
     radius.macery.local:
     #mysql.macery.local:
-    cert.macery.local:
+    #cert.macery.local:
     desk01:
 
 
