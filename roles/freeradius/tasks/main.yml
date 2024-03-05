@@ -28,7 +28,7 @@
       backup: yes
       line: password        sufficient      pam_radius.so 
 
-   - name: Create link for /etc/radius.com
+   - name: Create link for radius.com
      ansible.buitin.file:
        src: /usr/local/etc/radiusclient/servers
        dst: /etc/radius.conf
