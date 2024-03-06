@@ -31,7 +31,7 @@
    - name: copy /etc/pam.d/sshd
      ansible.builtin.copy:
       src: conf/sshd
-      dest: /etc/pamd.sshd
+      dest: /etc/pam.d/sshd
       #backup: yes
 
    - name: Create link for radius.conf
