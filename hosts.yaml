@@ -5,7 +5,7 @@ freebsd:
   hosts:
     jailhouse.macery.local:
     fulsom.macery.local:
-    #nagios.macery.local:
+    nagios.macery.local:
     #ca.macery.local:
     #web.macery.local:
     #squid.macery.local:
