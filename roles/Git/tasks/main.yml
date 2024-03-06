@@ -1,0 +1,6 @@
+---
+# tasks file for Git
+
+   - name: Install Git
+     pkgng:
+      name: git

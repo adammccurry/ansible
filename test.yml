@@ -41,3 +41,6 @@
    
    - ansible.builtin.import_role:
        name: freeradius
+
+   - ansible.builtin.import_role:
+       name: Git
