@@ -4,3 +4,7 @@
    - name: Install Git
      pkgng:
       name: git
+
+   - name: Install GitHub CLI
+     pkgng:
+      name: gh
