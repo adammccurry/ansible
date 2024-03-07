@@ -18,3 +18,5 @@ freebsd:
 sendmail:
   mail.macery.local:
 
+nagios_url:
+  monitor.macery.local:
