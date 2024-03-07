@@ -1,6 +1,6 @@
 
 - name: run configure
-  ansible.builtin.command: 'configure'
+  ansible.builtin.command: './configure'
   args:
     chdir: '{{ extracted_path }}{{ nagios_ver }}'  
   register: out
