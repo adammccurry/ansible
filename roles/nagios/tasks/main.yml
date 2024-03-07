@@ -11,21 +11,18 @@
     #apt install wget unzip curl openssl build-essential libgd-dev libssl-dev libapache2-mod-php php-gd php apache2
 
 
-- name: Create Nagios Download directory
-  ansible.builtin.file:
-    path: /home/ansible/nagios
-    state: directory
-    recurse: yes
+- name: Get Nagios
+  ansible.builtin.include_tasks: getnagios.yml
+  tags:
+    - always
 
-- name: Download / Extract Nagios
-  ansible.builtin.unarchive:
-    src: ' {{ nagios_url}}{{nagios_ver}}'
-    dest: /home/ansible/nagios
-    remote_src: yes
+- name: Build Nagios
+  ansible.builtin.include_tasks: buildnagios.yml
+  tags:
+    - always
 
 
-#- name: Download Nagios Bin
-#  ansible.builtin.get_url:
-#    url: '{{ nagios_url }} {{ nagios_ver}}''
-#    dest: /etc/foo.conf
-#    mode: '0440'
+#- name: Get Nagios
+#  ansible.builtin.include_tasks: getnagios.yml
+#  tags:
+#    - always
