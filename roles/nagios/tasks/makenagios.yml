@@ -10,6 +10,8 @@
 #- debug: var=out.stdout_lines
 
 - name: Build 'all' target 
+  become: true
+  become_user: root
   make:
     chdir: '{{ extracted_path }}{{ nagios_ver }}'
     target: all
