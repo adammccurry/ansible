@@ -10,3 +10,5 @@
     src: ' {{ nagios_url}}{{nagios_ver}}.tar.gz'
     dest: /home/ansible/nagios
     remote_src: yes
+    owner: www-data
+    group: www-data

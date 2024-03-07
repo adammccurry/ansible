@@ -14,4 +14,4 @@
     chdir: '{{ extracted_path }}{{ nagios_ver }}'
     target: all
   become: true
-  become_user: root
+  
