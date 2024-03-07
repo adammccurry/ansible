@@ -13,6 +13,7 @@
   make:
     chdir: '{{ extracted_path }}{{ nagios_ver }}'
     target: all
-  become: yes
+  become: true
+  become_method: sudo
   
   
