@@ -11,4 +11,4 @@
     dest: /home/ansible/nagios
     remote_src: yes
     owner: ansible
-    group: wheel
+    group: ansible
