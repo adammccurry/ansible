@@ -14,7 +14,7 @@
 #  make:
 #    chdir: '{{ extracted_path }}{{ nagios_ver }}'
 #    target: all
-- name: Add nagios become_user
+- name: Add nagios 
   user:
     name: nagios
 
