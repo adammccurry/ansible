@@ -1,3 +1,6 @@
 
 - name: run configure
   ansible.builtin.command: '{{ extracted_path }}{{ nagios_ver }}/configure'
+  register: out
+
+- debug: var=out.stdout_lines
