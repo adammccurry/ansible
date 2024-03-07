@@ -1,31 +1,32 @@
 ---
 # tasks file for radiusClient
-- name: Install Pre Reqs
-  ansible.builtin.include_tasks: prereq.yml
+#- name: Install Pre Reqs
+#  ansible.builtin.include_tasks: prereq.yml
 #  args:
 #    apply:
 #      tags:
 #        - install
-  tags:
-    - always
+
+#  tags:
+#    - always
     #apt install wget unzip curl openssl build-essential libgd-dev libssl-dev libapache2-mod-php php-gd php apache2
 
 
-- name: Get Nagios
-  ansible.builtin.include_tasks: getnagios.yml
-  tags:
-    - always
+#- name: Get Nagios
+#  ansible.builtin.include_tasks: getnagios.yml
+#  tags:
+#    - always
 
-- name: Build Nagios
-  ansible.builtin.include_tasks: buildnagios.yml
-  tags:
-    - always
+#- name: Build Nagios
+#  ansible.builtin.include_tasks: buildnagios.yml
+#  tags:
+#    - always
 
 - name: Make Nagios
   ansible.builtin.include_tasks: makenagios.yml
   tags:
     - always
-    
+
 #- name: Get Nagios
 #  ansible.builtin.include_tasks: getnagios.yml
 #  tags:
