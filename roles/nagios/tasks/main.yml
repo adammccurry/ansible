@@ -81,14 +81,14 @@
 
 - name: Create Nagios Download directory
   ansible.builtin.file:
-    path: /home/semaphore/nagios
+    path: /home/ansible/nagios
     state: directory
     recurse: yes
 
 - name: Download / Extract Nagios
   ansible.builtin.unarchive:
     src: ' {{ nagios_url}}{{nagios_ver}}'
-    dest: /home/semaphore/nagios
+    dest: /home/ansible/nagios
     remote_src: yes
 
 
