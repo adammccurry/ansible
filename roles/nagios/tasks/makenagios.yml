@@ -1,10 +1,10 @@
 
 - name: Make all
-  ansible.builtin.command: make
+  ansible.builtin.command: '{{ extracted_path }}{{ nagios_ver }}\make all'
 
-  chdir: '{{ extracted_path }}{{ nagios_ver }}'
-  argv:
-    - all
+ # chdir: '{{ extracted_path }}{{ nagios_ver }}'
+ # argv:
+ #   - all
   register: out
 
 - debug: var=out.stdout_lines
