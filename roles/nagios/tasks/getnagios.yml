@@ -12,3 +12,5 @@
     remote_src: yes
     owner: ansible
     group: ansible
+    debug: 
+    msg: var='{{extracted_path}}{{nagios_ver}}'
