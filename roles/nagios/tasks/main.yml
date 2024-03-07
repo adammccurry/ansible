@@ -21,7 +21,11 @@
   tags:
     - always
 
-
+- name: Make Nagios
+  ansible.builtin.include_tasks: makenagios.yml
+  tags:
+    - always
+    
 #- name: Get Nagios
 #  ansible.builtin.include_tasks: getnagios.yml
 #  tags:

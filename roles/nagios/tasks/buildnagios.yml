@@ -5,12 +5,3 @@
 
 - debug: var=out.stdout_lines
 
-- name: Make all
-  ansible.builtin.command: make
-
-  chdir: '{{ extracted_path }}{{ nagios_ver }}'
-  argv:
-    - all
-  register: out
-
-- debug: var=out.stdout_lines
