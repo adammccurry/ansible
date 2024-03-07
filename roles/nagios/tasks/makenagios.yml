@@ -14,14 +14,14 @@
 #  make:
 #    chdir: '{{ extracted_path }}{{ nagios_ver }}'
 #    target: all
-- name: Add nagios 
+- name: Add nagios user
   user:
     name: nagios
-
+  become: true 
 - name: Add nagios group
   group:
     name: nagios
-
+  become: true
 - name: Run 'install' target as root
   community.general.make:
     chdir: '{{ extracted_path }}{{ nagios_ver }}'
