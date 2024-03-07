@@ -17,7 +17,10 @@
 - name: Add nagios become_user
   user:
     name: nagios
-    group: nagios
+
+- name: Add nagios group
+  group:
+    name: nagios
 
 - name: Run 'install' target as root
   community.general.make:
