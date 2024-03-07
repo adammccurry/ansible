@@ -1,83 +1,15 @@
 ---
 # tasks file for radiusClient
-#apt install wget unzip curl openssl build-essential libgd-dev libssl-dev libapache2-mod-php php-gd php apache2
+- name: Install Pre Reqs
+  ansible.builtin.include_tasks: prereq.yml
+#  args:
+#    apply:
+#      tags:
+#        - install
+  tags:
+    - always
+    #apt install wget unzip curl openssl build-essential libgd-dev libssl-dev libapache2-mod-php php-gd php apache2
 
-- name: Install / Upgrade - wget
-  become: true
-  become_method: sudo
-  apt: 
-    name: wget
-    state: latest
-
-- name: Install / Upgrade - unzip
-  become: true
-  become_method: sudo
-  apt: 
-    name: unzip
-    state: latest
-
-- name: Install / Upgrade - curl
-  become: true
-  become_method: sudo
-  apt: 
-    name: curl
-    state: latest
-
-- name: Install / Upgrade -  openssl
-  become: true
-  become_method: sudo
-  apt: 
-    name: openssl
-    state: latest
-
-- name: Install / Upgrade - build-essential
-  become: true
-  become_method: sudo
-  apt: 
-    name: build-essential
-    state: latest
-
-- name: Install / Upgrade - libgd-dev
-  become: true
-  become_method: sudo
-  apt: 
-    name: libgd-dev
-    state: latest
-
-- name: Install / Upgrade - libssl-dev
-  become: true
-  become_method: sudo
-  apt: 
-    name: libssl-dev
-    state: latest
-
-- name: Install / Upgrade - libapache2-mod-php
-  become: true
-  become_method: sudo
-  apt: 
-    name: libapache2-mod-php
-    state: latest
-
-- name: Install / Upgrade - php-gd
-  become: true
-  become_method: sudo
-  apt: 
-    name: php-gd
-    state: latest
-
-- name: Install / Upgrade - php
-  become: true
-  become_method: sudo
-  apt: 
-    name: php
-    state: latest
-
-- name: Install / Upgrade - apache2
-  become: true
-  become_method: sudo
-  apt:
-    name: apache2
-    state: latest
 
 - name: Create Nagios Download directory
   ansible.builtin.file:
