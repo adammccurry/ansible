@@ -18,7 +18,7 @@
   become: true
   user:
     name: nagios
-    password: nagios
+    
   
 
 #- name: Add nagios group
