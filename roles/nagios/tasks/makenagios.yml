@@ -15,14 +15,16 @@
 #    chdir: '{{ extracted_path }}{{ nagios_ver }}'
 #    target: all
 - name: Add nagios user
+  become: true
   user:
     name: nagios
-  become: true
+    password: nagios
   
-- name: Add nagios group
-  group:
-    name: nagios
-  become: true
+
+#- name: Add nagios group
+#  group:
+#    name: nagios
+#  become: true
 
 - name: Run 'install' target as root
   community.general.make:
