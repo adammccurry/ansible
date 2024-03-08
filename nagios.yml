@@ -1,5 +1,10 @@
 - hosts: all
   gather_facts: yes
   tasks:
-    - ansible.builtin.import_role:
-        name: nagios
+- name: Add nagios user
+  become: true
+  user:
+    name: nagios
+
+- ansible.builtin.import_role:
+    name: nagios
