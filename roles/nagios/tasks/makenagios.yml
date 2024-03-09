@@ -15,7 +15,7 @@
 #    chdir: '{{ extracted_path }}{{ nagios_ver }}'
 #    target: all
     
-  
+        
 
 #- name: Add nagios group
 #  group:
@@ -30,9 +30,10 @@
 #  become: true
 
 - name: Run 'install' target as root
+  become: true
+  become_method: sudo
+
   community.general.make:
 #    chdir: '{{ extracted_path }}{{ nagios_ver }}'
     chdir: '/build/{{nagios_ver}}'
     target: install
-  become: true
-
