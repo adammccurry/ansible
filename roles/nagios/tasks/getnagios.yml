@@ -1,7 +1,7 @@
 
 - name: Create Nagios Download directory
   ansible.builtin.file:
-    path: /home/ansible/nagios
+    path: /build/nagios/
     state: directory
     recurse: yes
 
