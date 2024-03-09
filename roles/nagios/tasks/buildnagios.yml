@@ -1,7 +1,8 @@
 
 - name: Nagios user 
   ansible.builtin.user:
-    name: nagios 
+    name: nagios
+  become: true 
 
 - name: run configure
   ansible.builtin.command: './configure'
