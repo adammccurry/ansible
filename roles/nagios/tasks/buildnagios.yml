@@ -1,6 +1,6 @@
 
 - name: Nagios user 
-  ansible.builtin.users:
+  ansible.builtin.user:
     name: nagios 
 
 - name: run configure
