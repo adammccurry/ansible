@@ -8,7 +8,7 @@
 - name: Download / Extract Nagios
   ansible.builtin.unarchive:
     src: ' {{ nagios_url}}{{nagios_ver}}.tar.gz'
-    dest: {{ extracted_path }}
+    dest: '{{ extracted_path }}'
     #dest: /home/ansible/nagios
     remote_src: yes
     
