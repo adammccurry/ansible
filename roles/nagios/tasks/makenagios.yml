@@ -24,13 +24,16 @@
 
 - name: Run 'install-groups-users' target as root
   community.general.make:
-    chdir: '{{ extracted_path }}{{ nagios_ver }}'
+    #chdir: '{{ extracted_path }}{{ nagios_ver }}'
+    chdir: '/build/{{nagios_ver}}'
     target: install-groups-users
   become: true
 
 - name: Run 'install' target as root
   community.general.make:
-    chdir: '{{ extracted_path }}{{ nagios_ver }}'
+#    chdir: '{{ extracted_path }}{{ nagios_ver }}'
+    chdir: '/build/{{nagios_ver}}'
+
     target: install
   become: true
 
