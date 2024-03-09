@@ -3,7 +3,7 @@
   tasks:
   - name: Add nagios user
     become: true
-    ansible.builtin.user:
+    community.general.user:
       name: nagios
   
   - ansible.builtin.import_role:
