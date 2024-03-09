@@ -4,4 +4,4 @@
 
 nagios_url: "https://assets.nagios.com/downloads/nagioscore/releases/"
 nagios_ver: "nagios-4.5.1"
-extracted_path: "/home/ansible/nagios/"
+extracted_path: "/build/nagios/"
