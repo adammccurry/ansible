@@ -1,8 +1,8 @@
 
 - name: run configure
-  ansible.builtin.command: 'sudo ./configure'
+  ansible.builtin.command: './configure'
   become: true
-  become_user: root
+  
   args:
     chdir: '{{ extracted_path }}{{ nagios_ver }}'  
   register: out
