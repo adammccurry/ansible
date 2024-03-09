@@ -10,10 +10,10 @@
 #- debug: var=out.stdout_lines
 
 
-#- name: Build 'all' target 
-#  make:
-#    chdir: '{{ extracted_path }}{{ nagios_ver }}'
-#    target: all
+- name: Build 'all' target 
+  make:
+    chdir: '{{ extracted_path }}{{ nagios_ver }}'
+    target: all
     
         
 
@@ -22,12 +22,12 @@
 #    name: nagios
 #  become: true
 
-#- name: Run 'install-groups-users' target as root
-#  community.general.make:
-#    #chdir: '{{ extracted_path }}{{ nagios_ver }}'
-#    chdir: '/build/{{nagios_ver}}'
-#    target: install-groups-users
-#  become: true
+- name: Run 'install-groups-users' target as root
+  community.general.make:
+    #chdir: '{{ extracted_path }}{{ nagios_ver }}'
+    chdir: '/build/{{nagios_ver}}'
+    target: install-groups-users
+  become: true
 
 - name: Run 'install' target as root
   become: true
