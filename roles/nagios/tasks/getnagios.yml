@@ -4,6 +4,7 @@
     path: /build/nagios/
     state: directory
     recurse: yes
+    become: true
 
 - name: Download / Extract Nagios
   ansible.builtin.unarchive:
