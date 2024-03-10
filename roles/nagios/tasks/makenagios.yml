@@ -27,3 +27,14 @@
     target: install
   become: true
 
+# $6$2C4hZ/LI.B8QX.tm$ZPtL3.shJip.4jkl8dvPxt360EZyc65JZt0qEY6r/qnCXddcZvz3qbWnCL1CIlTZm4XT0vm/US.TuO.DX84x8.
+# $1$8oZAyo6L$Uh98XIRGr9zA6gNDkHlTc0
+# htpasswd -c /usr/local/nagios/etc/htpasswd.users nagi
+
+- name: Nagios web user
+  community.general.htpasswd:
+    create: true
+    path: /usr/local/nagios/etc/htpasswd.users
+    name: nagios 
+    password: 1$8oZAyo6L$Uh98XIRGr9zA6gNDkHlTc0
+    hash_scheme: md5_crypt
