@@ -23,8 +23,13 @@
      lineinfile:
       dest: /etc/rc.conf
       backup: yes
-      line: nrpe4_enable="YES"
-   
+      line: nrpe_enable="YES"
+   - name: NRPE Allowed hosts:
+     lineinfile:
+       dest: /usr/local/etc/nrpe.cfg
+       backup: yes
+       line: allowed_hosts=127.0.0.1,::1,192.168.3.72
+       
    - name: Install NANO
      pkgng:
       name: nano
