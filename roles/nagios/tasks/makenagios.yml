@@ -31,9 +31,9 @@
 
 - name: Run 'install' target as root
   become: true
-  become_method: sudo
-
+  
   community.general.make:
-#    chdir: '{{ extracted_path }}{{ nagios_ver }}'
-    chdir: '/build/{{nagios_ver}}'
+    become: true
+    chdir: '{{ extracted_path }}{{ nagios_ver }}'
+#    chdir: '/build/{{nagios_ver}}'
     target: install
