@@ -25,7 +25,11 @@
   become: true
 
 - name: Validate configuration
-  command: '/usr/local/nagios/bin/nagios -v'
+  command: '/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg'
   register: validation
   become: true
 - debug: var=validation.stdout_lines  
+
+- name: Start nagios as daemon
+  command: '/usr/local/nagios/bin/nagios -d /usr/local/nagios/etc/nagios.cfg'
+  become: true
