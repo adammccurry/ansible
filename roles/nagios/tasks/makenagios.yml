@@ -1,13 +1,4 @@
 
-#- name: Make all
-#  ansible.builtin.command: '{{ extracted_path }}{{ nagios_ver }}/make all'
-#
-# # chdir: '{{ extracted_path }}{{ nagios_ver }}'
-# # argv:
-# #   - all
-#  register: out
-#
-#- debug: var=out.stdout_lines
 
 
 - name: Build 'all' target 
@@ -17,11 +8,6 @@
     
         
 
-#- name: Add nagios group
-#  group:
-#    name: nagios
-#  become: true
-
 - name: Run 'install-groups-users' target as root
   community.general.make:
     #chdir: '{{ extracted_path }}{{ nagios_ver }}'
@@ -30,10 +16,9 @@
   become: true
 
 - name: Run 'install' target as root
-  become: true
-  
   community.general.make:
-    become: true
+  
     chdir: '{{ extracted_path }}{{ nagios_ver }}'
 #    chdir: '/build/{{nagios_ver}}'
     target: install
+  become: true
