@@ -5,3 +5,9 @@
 nagios_url: "https://assets.nagios.com/downloads/nagioscore/releases/"
 nagios_ver: "nagios-4.5.1"
 extracted_path: "/build/nagios/"
+
+# https://github.com/nagios-plugins/nagios-plugins/releases/download/2.4.8/nagios-plugins-2.4.8.tar.gz
+# 2.4.8/nagios-plugins-2.4.8.tar.gz
+
+plugins_path: "https://github.com/nagios-plugins/nagios-plugins/releases/download/"
+plugins_ver: "2.4.8"

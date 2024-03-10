@@ -31,5 +31,6 @@
   ansible.builtin.include_tasks: setupwebui.yml
   tags: always
 
-
-
+- name: setup plugins_path
+  ansible.builtin.include_tasks: plugins.yml
+  tags: always

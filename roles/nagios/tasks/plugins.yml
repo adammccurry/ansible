@@ -1,0 +1,8 @@
+# https://github.com/nagios-plugins/nagios-plugins/releases/download/2.4.8/nagios-plugins-2.4.8.tar.gz
+
+- name: Download / Extract Nagios
+  ansible.builtin.unarchive:
+    src: ' {{ plugins_path }}{{ plugins_ver }}/nagios-plugins-{{ plugins_ver }}.tar.gz'
+    dest: '{{ extracted_path }}'
+    #dest: /home/ansible/nagios
+    remote_src: yes
