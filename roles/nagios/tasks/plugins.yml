@@ -6,3 +6,13 @@
     dest: '{{ extracted_path }}'
     #dest: /home/ansible/nagios
     remote_src: yes
+
+- name: run configure
+  ansible.builtin.command: './configure'
+  become: true
+  
+  args:
+    chdir: '{{ extracted_path }}nagios-plugins-{{ plugins_ver }}'  
+  register: out
+
+- debug: var=out.stdout_lines
