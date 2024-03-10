@@ -8,9 +8,10 @@
     remote_src: yes
 
 - name: run configure
-  ansible.builtin.command: './configure'
+# --with-nagios-user=nagios
+# --with-nagios-group=nagios
+  ansible.builtin.command: './configure --with-nagios-user=nagios --with-nagios-group=nagios'
   become: true
-  
   args:
     chdir: '{{ extracted_path }}nagios-plugins-{{ plugins_ver }}'  
   register: out
