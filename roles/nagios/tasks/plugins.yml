@@ -17,3 +17,14 @@
   register: out
 
 #- debug: var=out.stdout_lines
+
+- name: PLUGINS - Run 'install' target as root
+  community.general.make:
+    chdir: '{{ extracted_path }}nagios-plugins-{{ plugins_ver }}'
+    target: install
+  become: true
+
+- name: Validate configuration
+  command: '/usr/local/nagios/bin/nagios -v'
+  register: validation
+- debug: var=validation.stdout_lines  
