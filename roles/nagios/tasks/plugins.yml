@@ -27,4 +27,5 @@
 - name: Validate configuration
   command: '/usr/local/nagios/bin/nagios -v'
   register: validation
+  become: true
 - debug: var=validation.stdout_lines  
