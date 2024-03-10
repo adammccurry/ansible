@@ -74,3 +74,9 @@
   apt:
     name: apache2
     state: latest
+
+- name: Python python-passlib
+  become: true
+  apt:
+    name: python-passlib
+    state: latest 
