@@ -27,7 +27,9 @@
   tags:
     - always
 
-#- name: Get Nagios
-#  ansible.builtin.include_tasks: getnagios.yml
-#  tags:
-#    - always
+- name: Configure Apache
+  ansible.builtin.include_tasks: setupwebui.yml
+  tags: always
+
+
+

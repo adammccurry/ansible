@@ -23,8 +23,7 @@
 
 - name: Run 'install' target as root
   community.general.make:
-  
     chdir: '{{ extracted_path }}{{ nagios_ver }}'
-#    chdir: '/build/{{nagios_ver}}'
     target: install
   become: true
+

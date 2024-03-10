@@ -48,7 +48,7 @@
     state: latest
 
 - name: Install / Upgrade - libapache2-mod-php
-  become: yes
+  become: true
   become_method: sudo
   apt: 
     name: libapache2-mod-php

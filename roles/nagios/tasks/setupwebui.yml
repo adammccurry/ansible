@@ -1,0 +1,42 @@
+
+
+  ###
+  #sudo make install-commandmode
+  #/usr/bin/install -c -m 775 -o nagios -g nagios -d /usr/local/nagios/var/rw
+  #chmod g+s /usr/local/nagios/var/rw
+
+- name: Run install-commandmode target as root  
+  community.general.make:
+    chdir: '{{ extracted_path }}{{ nagios_ver }}'
+    target: install-commandmode
+    become: true
+
+    #install-config
+
+- name: Run install-config target as root  
+  community.general.make:
+    chdir: '{{ extracted_path }}{{ nagios_ver }}'
+    target: install-config
+    become: true
+
+    #install-webconf
+- name: Run install-webconf target as root  
+  community.general.make:
+    chdir: '{{ extracted_path }}{{ nagios_ver }}'
+    target: install-webconf
+    become: true
+
+
+#### Web Config
+#sudo a2enmod rewrite
+#sudo a2enmod cgi
+
+# enable rewrite
+- name: enabling apache rewrite
+  ansible.builtin.command: a2enmod rewrite
+  become: true 
+
+# Enable cgi
+- name: Enable CGI
+  ansible.builtin.command: a2enmod cgi
+  become: true
