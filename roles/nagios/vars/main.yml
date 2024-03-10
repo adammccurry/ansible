@@ -9,5 +9,5 @@ extracted_path: "/build/nagios/"
 # https://github.com/nagios-plugins/nagios-plugins/releases/download/2.4.8/nagios-plugins-2.4.8.tar.gz
 # 2.4.8/nagios-plugins-2.4.8.tar.gz
 
-plugins_path: "https://github.com/nagios-plugins/nagios-plugins/releases/download/"
+plugins_path: "https://github.com/nagios-plugins/nagios-plugins/release-2.4.8/download/"
 plugins_ver: "2.4.8"
