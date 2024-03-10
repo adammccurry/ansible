@@ -20,12 +20,18 @@
   become: true
 
     #install-webconf
+      #/etc/apache2/sites-enabled/nagios.conf
+- name: check for existing nagios.conf in /etc/apache2/sites-enabled/nagios.conf
+  stat: 
+    path: /etc/apache2/sites-enabled/nagios.conf
+  register: webconf
+
 - name: Run install-webconf target as root  
   community.general.make:
     chdir: '{{ extracted_path }}{{ nagios_ver }}'
     target: install-webconf
   become: true
-
+  when: not webconf.stat.exists
 
 #### Web Config
 #sudo a2enmod rewrite
