@@ -78,5 +78,5 @@
 - name: Python python-passlib
   become: true
   apt:
-    name: python-passlib
+    name: python3-passlib
     state: latest 
