@@ -9,7 +9,7 @@
   community.general.make:
     chdir: '{{ extracted_path }}{{ nagios_ver }}'
     target: install-commandmode
-    become: true
+  become: true
 
     #install-config
 
@@ -17,14 +17,14 @@
   community.general.make:
     chdir: '{{ extracted_path }}{{ nagios_ver }}'
     target: install-config
-    become: true
+  become: true
 
     #install-webconf
 - name: Run install-webconf target as root  
   community.general.make:
     chdir: '{{ extracted_path }}{{ nagios_ver }}'
     target: install-webconf
-    become: true
+  become: true
 
 
 #### Web Config
