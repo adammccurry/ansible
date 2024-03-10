@@ -16,4 +16,4 @@
     chdir: '{{ extracted_path }}nagios-plugins-{{ plugins_ver }}'  
   register: out
 
-- debug: var=out.stdout_lines
+#- debug: var=out.stdout_lines
