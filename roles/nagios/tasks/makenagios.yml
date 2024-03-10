@@ -18,9 +18,9 @@
 - name: Add Apache user to Nagios group
   user:
     name: www-data
-    group: nagios
+    groups: nagios
     append: true
-    
+
 - name: Run 'install' target as root
   community.general.make:
   
