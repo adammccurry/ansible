@@ -37,4 +37,4 @@
     path: /usr/local/nagios/etc/htpasswd.users
     name: nagios 
     password: 1$8oZAyo6L$Uh98XIRGr9zA6gNDkHlTc0
-    hash_scheme: md5_crypt
+    crypt_scheme: md5_crypt
