@@ -30,6 +30,12 @@
        backup: yes
        line: allowed_hosts=127.0.0.1,::1,192.168.3.72
 
+   - name: Restart service NRPE 
+     ansible.builtin.service:
+       name: nrpe
+       state: restarted
+
+
    - name: Install NANO
      pkgng:
       name: nano
